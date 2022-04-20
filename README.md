@@ -1,0 +1,1 @@
+Portafolio esta creado con laravel 9 , Vuejs 3 , tailwynd y varias librerias utilizandi NPM
