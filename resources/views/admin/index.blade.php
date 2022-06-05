@@ -6,7 +6,7 @@
    <div class="container mx-auto px-4">
        
     <div class="flex flex-col md:flex-row gap-3">
-        <a href="{{ route('portafolio.admin') }}" class="bg-yellow-400 hover:bg-yellow-300 rounded">
+        <a href="{{ route('portafolio.home') }}" class="bg-yellow-400 hover:bg-yellow-300 rounded">
             <h2 class="text-2xl text-center font-bold m-3 p-2">Portafolio</h2>
             <img src="/img/fondo2.jpg" alt="">
         </a>

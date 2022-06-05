@@ -20,17 +20,18 @@ return new class extends Migration
             $table->string('slug');
             $table->timestamps();
         });
+        
 
         Schema::create('portafolios', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
             $table->string('imagen_portafolio');
-            $table->string('git');
-            $table->string('linkedin');
             $table->text('descripcion');
-            $table->boolean('activa')->default(true);
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
+
+            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea la pagina');
+            $table->foreignId('categoria_id')->index('id')->on('categorias')->comment('La categoria de la pagina creada');
+
+            
             $table->timestamps();
         });
     }
