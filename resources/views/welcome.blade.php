@@ -32,7 +32,7 @@
     <!--====== HEADER PART START ======-->
 
     <section class="header_area" id="app">
-        <div class="navbar-area bg-white">
+        <div class="navbar-area bg-gray-100">
             <div class="container relative">
                 <div class="row items-center">
                     <div class="w-full">
@@ -58,7 +58,7 @@
                                         <a class="page-scroll" href="#services">Servicios</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#sertificaciones">Certificaciones</a>
+                                        <a class="page-scroll" href="#certificaciones">Certificaciones</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
                                         <a class="page-scroll" href="#work">Proyectos</a>
@@ -74,7 +74,7 @@
             </div> <!-- container -->
         </div> <!-- header navbar -->
 
-        <div id="home" class="header_hero bg-gray relative z-10 overflow-hidden lg:flex items-center">
+        <div id="home" class="header_hero bg-white relative z-10 overflow-hidden lg:flex items-center">
            
             <div class="container">
                 <div class="row">
@@ -93,12 +93,10 @@
 
             <div class="header_image flex items-center">
                 <div class="image 2xl:pl-25">
-                    <img src="assets/images/header-image.svg" alt="Header Image" style="width:500px;">
+                    <img src="assets/images/uno.jpg" alt="Header Image" style="height:500px;">
                 </div>
             </div> <!-- header image -->
         </div> <!-- header hero -->
-   
-   
     </section>
 
     <!--====== HEADER PART ENDS ======-->
@@ -160,7 +158,7 @@
             <div class="row justify-center">
                 <div class="w-full lg:w-1/2">
                     <div class="section_title text-center pb-6">
-                        <h5 class="sub_title">Que te ofresco</h5>
+                        <h5 class="sub_title">Servicios</h5>
                         <h4 class="main_title">Mis Servicios</h4>
                     </div> <!-- section title -->
                 </div>
@@ -219,16 +217,17 @@
 
     <!--====== SERTIFICACIONES PART START ======-->
     
-    <section id="sertificaciones" class="services_area pt-120 pb-120">
+    <section id="certificaciones" class="certificaciones_area pt-120 pb-120">
         <div class="container">
             <div class="row justify-center">
                 <div class="w-full lg:w-1/2">
                     <div class="section_title text-center pb-6">
-                        <h5 class="sub_title">Lo que he aprendido durante años de aprendizaje</h5>
+                        <h5 class="sub_title">Certificaciones</h5>
                         <h4 class="main_title">Mis Certificaciones</h4>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
+           
             <div class="row justify-center">
                 <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
@@ -268,120 +267,49 @@
 
     <!--====== WORK PART START ======-->
 
-    <section id="work" class="work_area bg-gray pt-120 pb-120">
+    <section id="work" class="proyectos_area pt-120 pb-120">
         <div class="container">
             <div class="row justify-center">
-                <div class="w-ull lg:w-1/2">
+                <div class="w-full lg:w-1/2">
                     <div class="section_title text-center pb-6">
                         <h5 class="sub_title">Proyectos</h5>
-                        <h4 class="main_title">Mis recientes trabajos</h4>
+                        <h4 class="main_title">Mis Recientes proyectos</h4>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="container-fluid">
-            <div class="work_wrapper relative">
-                <div class="row work_active">
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-1.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Marketing</a></h4>
-                                    <p class="mt-2">NoCodeAPI</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-2.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Creative Design</a></h4>
-                                    <p class="mt-2">UIdeck</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-3.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Web Design</a></h4>
-                                    <p class="mt-2">GrayGrids</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-4.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Analysis</a></h4>
-                                    <p class="mt-2">Ayro UI</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-5.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">SMM</a></h4>
-                                    <p class="mt-2">LineIcons</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-2.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">SEO</a></h4>
-                                    <p class="mt-2">PageBulb</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="assets/images/work-4.jpg" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Mobile App</a></h4>
-                                    <p class="mt-2">Rocket Internet LTD</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                </div> <!-- row -->
-            </div>
+           
+            <div class="row justify-center">
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
+                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
+                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
+                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+            </div> <!-- row -->
         </div> <!-- container -->
     </section>
 
@@ -491,17 +419,7 @@
                             </div> <!-- footer link -->
                         </div> <!-- footer link wrapper -->
                     </div>
-                    <div class="w-full md:w-2/3 lg:w-4/12">
-                        <div class="footer_subscribe mt-13 mx-3">
-                            <h2 class="footer_title text-xl font-semibold text-white">Newsletter</h2>
-                            <div class="subscribe_form text-right mt-9 relative">
-                                <form action="#">
-                                    <input type="text" placeholder="Enter email" class="w-full py-5 px-6 bg-white text-black rounded-full border-none">
-                                    <button class="main-btn subscribe-btn">Subscribe</button>
-                                </form>
-                            </div>
-                        </div> <!-- footer subscribe -->
-                    </div>
+                   
                 </div> <!-- row -->
             </div> <!-- footer widget -->
             <div class="footer_copyright pt-3 pb-6 border-t-2 border-solid border-white border-opacity-10 sm:flex justify-between">
@@ -527,16 +445,6 @@
     <a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->    
-
-
-    <!--====== Tiny Slider js ======-->
-    <script src="assets/js/tiny-slider.js"></script>
-
-    <!--====== Wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
-
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
 
 </body>
 
