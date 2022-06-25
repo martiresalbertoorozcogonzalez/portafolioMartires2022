@@ -104,18 +104,20 @@
     <!--====== ABOUT PART START ======-->
 
     <section id="about" class="about_area pt-120 relative">
+        @foreach ($acercademi as $item)
         <div class="about_image flex items-center justify-center">
             <div class="image lg:pr-13">
-                <img class="rounded-full" src="assets/images/uno.jpg" alt="about" style="width:300px;">
+                <img src="/storage/{{ $item->imagen_acercademi }}" alt="about">
             </div>
         </div> <!-- about image -->
         <div class="container">
             <div class="row justify-end">
+                    
                 <div class="w-full lg:w-1/2">
                     <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
                         <div class="section_title pb-9">
                             <h5 class="sub_title">Acerca de mi</h5>
-                            <h4 class="main_title">Martires Alberto Orozco</h4>
+                            <h4 class="main_title">{{ $item->nombre }}</h4>
                         </div> <!-- section title -->
                         <ul class="about_list pt-3">
                             <li class="flex mt-5">
@@ -123,24 +125,24 @@
                                     <i class="lni lni-checkmark-circle"></i>
                                 </div>
                                 <div class="about_list_content pl-5 pr-2">
-                                    <p>Vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv
-                                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos itaque 
-                                       exercitationem corrupti similique eius officia alias, laboriosam nisi consequatur
-                                       nesciunt?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, nam? 
+                                    <p>
+                                        {{ $item->descripcion }}
                                     </p>
                                 </div>
                             </li>
                         </ul>
                     </div> <!-- about content -->
                 </div>
+
             </div> <!-- row -->
         </div> <!-- container -->
+        @endforeach
     </section>
-
+    
     <!--====== ABOUT PART ENDS ======-->
-
+    
     <!--====== SERVICES PART START ======-->
-
+    
     <section id="services" class="services_area pt-120 pb-120">
         <div class="container">
             <div class="row justify-center">

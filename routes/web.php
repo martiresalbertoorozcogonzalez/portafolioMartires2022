@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Ruta para el Frontend de la pagina
+Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('front-end');
 
 Auth::routes(['verify' => true]);
 
@@ -23,7 +22,7 @@ Auth::routes(['verify' => true]);
 Route::get('/portafolio/admin', [App\Http\Controllers\PortafolioAdminController::class, 'index'])->name('portafolio.admin');
 
 //Ruta para el Crud de Acerca de mi
-Route::get('/acercademi/index', [App\Http\Controllers\AcercademiController::class, 'index'])->name('acercademi.home');
+Route::get('/acercademi/index', [App\Http\Controllers\AcercademiController::class, 'index'])->name('acercademi.index');
 
 Route::get('/acercademi/create', [App\Http\Controllers\AcercademiController::class, 'create'])->name('acercademi.create');
 

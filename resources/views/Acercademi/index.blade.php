@@ -24,7 +24,7 @@
             
         <div class="p-4 lg:w-1/3">
 
-            <div class="bg-yellow-400 hover:bg-yellow-300 rounded shadow-md relative">
+            <div class="rounded shadow-md relative">
                 
                 <img  src="/storage/{{ $item->imagen_acercademi }}" alt="">
 
