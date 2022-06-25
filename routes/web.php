@@ -34,7 +34,6 @@ Route::put('/acercademi/{acercademi}',[App\Http\Controllers\AcercademiController
 
 Route::delete('/acercademi/{acercademi}',[App\Http\Controllers\AcercademiController::class, 'destroy'])->name('acercademi.delete');
 
-
 // Rutas para el CRUD de Portafolio
 Route::get('/portafolio/index', [App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.home');
 
@@ -47,3 +46,17 @@ Route::get('/portafolio/{portafolio}/edit', [App\Http\Controllers\PortafolioCont
 Route::put('/portafolio/{portafolio}',[App\Http\Controllers\PortafolioController::class, 'update'])->name('portafolio.update');
 
 Route::delete('/portafolio/{portafolio}',[App\Http\Controllers\PortafolioController::class, 'destroy'])->name('portafolio.delete');
+
+
+//Ruta la crud de Certificaciones
+Route::get('/certificaciones/index', [App\Http\Controllers\CertificacionesController::class, 'index'])->name('certificaciones.index');
+
+Route::get('/certificaciones/create', [App\Http\Controllers\CertificacionesController::class, 'create'])->name('certificaciones.create');
+
+Route::post('/certificaciones', [App\Http\Controllers\CertificacionesController::class, 'store'])->name('certificaciones.store');
+
+Route::get('/certificaciones/{certificaciones}/edit', [App\Http\Controllers\CertificacionesController::class, 'edit'])->name('certificaciones.edit');
+
+Route::put('/certificaciones/{certificaciones}',[App\Http\Controllers\CertificacionesController::class, 'update'])->name('certificaciones.update');
+
+Route::delete('/certificaciones/{certificaciones}',[App\Http\Controllers\CertificacionesController::class, 'destroy'])->name('certificaciones.delete');

@@ -128,7 +128,7 @@ class AcercademiController extends Controller
             $acercademi->save();
     
             //redireccionar
-            return redirect()->route('acercademi.index');
+            return redirect()->route('acercademi.index')->with('estado','Acercademi a sido actualizado');
     
     }
 
