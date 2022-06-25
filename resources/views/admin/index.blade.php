@@ -10,10 +10,10 @@
             <h2 class="text-2xl text-center font-bold m-3 p-2">Portafolio</h2>
             <img src="/img/fondo2.jpg" alt="">
         </a>
-        <button class="bg-red-400 hover:bg-red-300 rounded">
-            <h2 class="text-2xl text-center font-bold m-3 p-2">Categorias</h2>
+        <a href="{{ route('acercademi.home') }}" class="bg-red-400 hover:bg-red-300 rounded">
+            <h2 class="text-2xl text-center font-bold m-3 p-2">Acerca de mi</h2>
             <img src="/img/fondo2.jpg" alt="">
-        </button>
+        </a>
         <button class="bg-blue-400 hover:bg-blue-300 rounded">
             <h2 class="text-2xl text-center font-bold m-3 p-2">Certificados</h2>
             <img src="/img/fondo2.jpg" alt="">
@@ -22,7 +22,8 @@
             <h2 class="text-2xl text-center font-bold m-3 p-2">Habilidades</h2>
             <img src="/img/fondo2.jpg" alt="">
         </button>
-      </div>
+    </div>
+
    </div>
     
 @endsection

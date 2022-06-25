@@ -22,6 +22,20 @@ Auth::routes(['verify' => true]);
 // Ruta hacia el admin del portafolio
 Route::get('/portafolio/admin', [App\Http\Controllers\PortafolioAdminController::class, 'index'])->name('portafolio.admin');
 
+//Ruta para el Crud de Acerca de mi
+Route::get('/acercademi/index', [App\Http\Controllers\AcercademiController::class, 'index'])->name('acercademi.home');
+
+Route::get('/acercademi/create', [App\Http\Controllers\AcercademiController::class, 'create'])->name('acercademi.create');
+
+Route::post('/acercademi', [App\Http\Controllers\AcercademiController::class, 'store'])->name('acercademi.store');
+
+Route::get('/acercademi/{acercademi}/edit', [App\Http\Controllers\AcercademiController::class, 'edit'])->name('acercademi.edit');
+
+Route::put('/acercademi/{acercademi}',[App\Http\Controllers\AcercademiController::class, 'update'])->name('acercademi.update');
+
+Route::delete('/acercademi/{acercademi}',[App\Http\Controllers\AcercademiController::class, 'destroy'])->name('acercademi.delete');
+
+
 // Rutas para el CRUD de Portafolio
 Route::get('/portafolio/index', [App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.home');
 

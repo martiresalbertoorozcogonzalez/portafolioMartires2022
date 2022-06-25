@@ -91,9 +91,9 @@
             </div> <!-- container -->
             <div class="header_shape hidden lg:block"></div>
 
-            <div class="header_image flex items-center">
+            <div class="header_image flex items-center justify-center">
                 <div class="image 2xl:pl-25">
-                    <img src="assets/images/uno.jpg" alt="Header Image" style="height:500px;">
+                    <img src="assets/images/dos.svg" alt="Header Image" style="height:400px;">
                 </div>
             </div> <!-- header image -->
         </div> <!-- header hero -->
@@ -104,9 +104,9 @@
     <!--====== ABOUT PART START ======-->
 
     <section id="about" class="about_area pt-120 relative">
-        <div class="about_image flex items-end justify-end">
+        <div class="about_image flex items-center justify-center">
             <div class="image lg:pr-13">
-                <img src="assets/images/about.svg" alt="about" style="width:450px;">
+                <img class="rounded-full" src="assets/images/uno.jpg" alt="about" style="width:300px;">
             </div>
         </div> <!-- about image -->
         <div class="container">
@@ -123,23 +123,11 @@
                                     <i class="lni lni-checkmark-circle"></i>
                                 </div>
                                 <div class="about_list_content pl-5 pr-2">
-                                    <p>Vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                                </div>
-                            </li>
-                            <li class="flex mt-5">
-                                <div class="about_check">
-                                    <i class="lni lni-checkmark-circle"></i>
-                                </div>
-                                <div class="about_list_content pl-5 pr-2">
-                                    <p>At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                                </div>
-                            </li>
-                            <li class="flex mt-5">
-                                <div class="about_check">
-                                    <i class="lni lni-checkmark-circle"></i>
-                                </div>
-                                <div class="about_list_content pl-5 pr-2">
-                                    <p>Dvero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
+                                    <p>Vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv
+                                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos itaque 
+                                       exercitationem corrupti similique eius officia alias, laboriosam nisi consequatur
+                                       nesciunt?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, nam? 
+                                    </p>
                                 </div>
                             </li>
                         </ul>
