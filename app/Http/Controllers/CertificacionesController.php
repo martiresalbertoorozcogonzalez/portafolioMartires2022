@@ -113,7 +113,7 @@ class CertificacionesController extends Controller
             $ruta_imagen = $request['imagen_certificado']->store('certificaciones','public');
     
             //Resize de la imagen
-            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(300,300);
+            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(800,200);
     
             $img->save();
     

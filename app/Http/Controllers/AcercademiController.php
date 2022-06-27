@@ -117,7 +117,7 @@ class AcercademiController extends Controller
                 $ruta_imagen = $request['imagen_acercademi']->store('acercademi','public');
         
                 //Resize de la imagen
-                $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(300,300);
+                $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(400,400);
         
                 $img->save();
         

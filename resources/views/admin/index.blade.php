@@ -6,7 +6,7 @@
    <div class="container mx-auto px-4">
        
     <div class="flex flex-col md:flex-row gap-3">
-        <a href="{{ route('portafolio.admin') }}" class="bg-yellow-400 hover:bg-yellow-300 rounded">
+        <a href="{{ route('portafolio.index') }}" class="bg-yellow-400 hover:bg-yellow-300 rounded">
             <h2 class="text-2xl text-center font-bold m-3 p-2">Portafolio</h2>
             <img src="/img/fondo2.jpg" alt="">
         </a>
@@ -18,10 +18,10 @@
             <h2 class="text-2xl text-center font-bold m-3 p-2">Certificados</h2>
             <img src="/img/fondo2.jpg" alt="">
         </a>
-        <button class="bg-green-400 hover:bg-green-300 rounded">
-            <h2 class="text-2xl text-center font-bold m-3 p-2">Habilidades</h2>
+        {{-- <a href="{{ route('servicios.index') }}" class="bg-green-400 hover:bg-green-300 rounded">
+            <h2 class="text-2xl text-center font-bold m-3 p-2">Servicios</h2>
             <img src="/img/fondo2.jpg" alt="">
-        </button>
+        </a> --}}
     </div>
 
    </div>

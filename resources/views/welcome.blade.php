@@ -106,8 +106,8 @@
     <section id="about" class="about_area pt-120 relative">
         @foreach ($acercademi as $item)
         <div class="about_image flex items-center justify-center">
-            <div class="image lg:pr-13">
-                <img src="/storage/{{ $item->imagen_acercademi }}" alt="about">
+            <div class="image lg:pr-13 mt-44">
+                <img class="rounded-full" src="/storage/{{ $item->imagen_acercademi }}" alt="about">
             </div>
         </div> <!-- about image -->
         <div class="container">
@@ -144,6 +144,7 @@
     <!--====== SERVICES PART START ======-->
     
     <section id="services" class="services_area pt-120 pb-120">
+        
         <div class="container">
             <div class="row justify-center">
                 <div class="w-full lg:w-1/2">
@@ -157,7 +158,7 @@
                 <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
                         <div class="services_icon">
-                            <i class="lni lni-layout"></i>
+                            <i class="lni lni-laptop-phone"></i>
                             <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
                                 <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
                             </svg>
@@ -168,7 +169,7 @@
                         </div>
                     </div> <!-- single services -->
                 </div>
-
+                
                 <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
                         <div class="services_icon">
@@ -219,35 +220,18 @@
             </div> <!-- row -->
            
             <div class="row justify-center">
+                @foreach ($certificaciones as $item)
+                    
                 <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
-                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
+                        <img src="/storage/{{ $item->imagen_certificado }}" alt="web designe">
                         <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
+                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">{{ $item->titulo }}</h3>
+                            <p class="mt-4">{{ $item->descripcion }}</p>
                         </div>
                     </div> <!-- single services -->
                 </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
+                @endforeach
 
             </div> <!-- row -->
         </div> <!-- container -->
@@ -268,38 +252,24 @@
                 </div>
             </div> <!-- row -->
            
+            @foreach ($portafolio as $item)
+                
+            
             <div class="row justify-center">
                 <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
-                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
+                        <img src="/storage/{{ $item->imagen_portafolio }}" alt="web designe" width="250" height="150">
                         <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
+                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                {{ $item->titulo}}
+                            </h3>
+                            <p class="mt-4">{{ $item->descripcion }}</p>
                         </div>
                     </div> <!-- single services -->
                 </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <img src="assets/images/cert-1.jpg" alt="web designe" width="250" height="150">
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Responsive Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
             </div> <!-- row -->
+
+            @endforeach
         </div> <!-- container -->
     </section>
 
@@ -325,26 +295,37 @@
                         </div> <!-- section title -->
                         
                         <div class="contact_form">
-                            <form id="contact-form" action="assets/php/contact.php" method="POST">
+                            <form  action="{{ url('contacto') }}" method="Post" novalidate>
+                                
+                                @csrf
+                               
+
                                 <div class="row">
                                     <div class="w-full md:w-1/2">
                                         <div class="mx-3">
                                             <div class="single_form mt-8">
-                                                <input name="name" id="name" type="text" placeholder="Name" class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
+                                                <input name="name" id="name" type="text" placeholder="Nombre" value="{{ old('name') }}" class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
                                             </div> <!-- single form -->
                                         </div>
                                     </div>
                                     <div class="w-full md:w-1/2">
                                         <div class="mx-3">
                                             <div class="single_form mt-8">
-                                                <input name="email" id="email" type="email" placeholder="Email" class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
+                                                <input name="email" id="email" type="email" placeholder="Email" value="{{ old('email') }}" class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
+                                            </div> <!-- single form -->
+                                        </div>
+                                    </div>
+                                    <div class="w-full md:w-1/2">
+                                        <div class="mx-3">
+                                            <div class="single_form mt-8">
+                                                <input name="subject" id="subject" type="text" placeholder="Asunto" value="{{ old('subject') }}" class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
                                             </div> <!-- single form -->
                                         </div>
                                     </div>
                                     <div class="w-full">
                                         <div class="mx-3">
                                             <div class="single_form mt-8">
-                                                <textarea name="message" id="message" placeholder="Message" rows="5" class="w-full rounded-md py-4 px-6 border border-solid border-body-color resize-none"></textarea>
+                                                <textarea name="body" id="body" placeholder="Mensaje" value="{{ old('body') }}" rows="5" class="w-full rounded-md py-4 px-6 border border-solid border-body-color resize-none"></textarea>
                                             </div> <!-- single form -->
                                         </div>
                                     </div>
@@ -352,7 +333,7 @@
                                     <div class="w-full">
                                         <div class="mx-3">
                                             <div class="single_form mt-8">
-                                                <button type="submit" class="main-btn contact-btn">Submit</button>
+                                                <button type="submit" class="main-btn contact-btn bg-red-500">Enviar</button>
                                             </div> <!-- single form -->
                                         </div>
                                     </div>
@@ -370,61 +351,10 @@
     <!--====== FOOTER PART START ======-->
 
     <footer id="footer" class="footer_area bg-black relative z-10">
-        <div class="shape absolute left-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
-            <img src="assets/images/footer-shape-left.png" alt="">
-        </div>
-        <div class="shape absolute right-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
-            <img src="assets/images/footer-shape-right.png" alt="">
-        </div>
         <div class="container">
-            <div class="footer_widget pt-18 pb-120">
-                <div class="row justify-center">
-                    <div class="w-full md:w-1/2 lg:w-3/12">
-                        <div class="footer_about mt-13 mx-3">
-                            <div class="footer_logo">
-                                <a href="#"><img src="assets/images/logoNuevoPerfuventas.png" alt="" width="70px"></a>
-                            </div>
-                            <div class="footer_content mt-8">
-                                <p class="text-white">Lorem ipsum dolor sitco nsetetu nonumy eirmod tempor invidunt ut labore et dolore magna uyam erat, sed diam.</p>
-                            </div>
-                        </div> <!-- footer about -->
-                    </div>
-                    <div class="w-full md:w-1/2 lg:w-5/12">
-                        <div class="footer_link_wrapper flex flex-wrap mx-3">
-                            <div class="footer_link w-1/2 md:pl-13 mt-13">
-                                <h2 class="footer_title text-xl font-semibold text-white">Quick Links</h2>
-                                <ul class="link pt-4">
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Company</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Privacy Policy</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">About</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                            <div class="footer_link w-1/2 md:pl-13 mt-13">
-                                <h2 class="footer_title text-xl font-semibold text-white">Resources</h2>
-                                <ul class="link pt-4">
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Support</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Contact</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Terms</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                        </div> <!-- footer link wrapper -->
-                    </div>
-                   
-                </div> <!-- row -->
-            </div> <!-- footer widget -->
-            <div class="footer_copyright pt-3 pb-6 border-t-2 border-solid border-white border-opacity-10 sm:flex justify-between">
-                <div class="footer_social pt-4 mx-3 text-center">
-                    <ul class="social flex justify-center sm:justify-start">
-                        <li class="mr-3"><a href="https://facebook.com/uideckHQ"><i class="lni lni-facebook-filled"></i></a></li>
-                        <li class="mr-3"><a href="https://twitter.com/uideckHQ"><i class="lni lni-twitter-filled"></i></a></li>
-                        <li class="mr-3"><a href="https://instagram.com/uideckHQ"><i class="lni lni-instagram-original"></i></a></li>
-                        <li class="mr-3"><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-                    </ul>
-                </div> <!-- footer social -->
-                <div class="footer_copyright_content pt-4 text-center">
-                    <p class="text-white">Designed and Developed by <a href="https://uideck.com" rel="nofollow" class="text-white hover:text-theme-color">UIdeck</a> and <a href="https://tailwindtemplates.co" rel="nofollow" class="text-white hover:text-theme-color">Tailwind Templates</a></p>
-                </div> <!-- footer copyright content -->
-            </div> <!-- footer copyright -->
+            <div class="footer_logo row justify-center">
+                <a class="mt-10 mb-10" href="#"><img src="assets/images/logoNuevoPerfuventas.png" alt="" width="90px"></a>
+            </div>
         </div> <!-- container -->
     </footer>
 

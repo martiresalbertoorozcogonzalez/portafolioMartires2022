@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +20,12 @@ Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name
 
 Auth::routes(['verify' => true]);
 
+
+//Rutas para contacto 
+Route::post('contacto', [App\Http\Controllers\MailController::class, 'store'])->name('contacto');
+
+
+
 // Ruta hacia el admin del portafolio
 Route::get('/portafolio/admin', [App\Http\Controllers\PortafolioAdminController::class, 'index'])->name('portafolio.admin');
 
@@ -35,7 +43,7 @@ Route::put('/acercademi/{acercademi}',[App\Http\Controllers\AcercademiController
 Route::delete('/acercademi/{acercademi}',[App\Http\Controllers\AcercademiController::class, 'destroy'])->name('acercademi.delete');
 
 // Rutas para el CRUD de Portafolio
-Route::get('/portafolio/index', [App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.home');
+Route::get('/portafolio/index', [App\Http\Controllers\PortafolioController::class, 'index'])->name('portafolio.index');
 
 Route::get('/portafolio/create', [App\Http\Controllers\PortafolioController::class, 'create'])->name('portafolio.create');
 
@@ -48,7 +56,7 @@ Route::put('/portafolio/{portafolio}',[App\Http\Controllers\PortafolioController
 Route::delete('/portafolio/{portafolio}',[App\Http\Controllers\PortafolioController::class, 'destroy'])->name('portafolio.delete');
 
 
-//Ruta la crud de Certificaciones
+//Rutas para el crud de Certificaciones
 Route::get('/certificaciones/index', [App\Http\Controllers\CertificacionesController::class, 'index'])->name('certificaciones.index');
 
 Route::get('/certificaciones/create', [App\Http\Controllers\CertificacionesController::class, 'create'])->name('certificaciones.create');
@@ -60,3 +68,17 @@ Route::get('/certificaciones/{certificaciones}/edit', [App\Http\Controllers\Cert
 Route::put('/certificaciones/{certificaciones}',[App\Http\Controllers\CertificacionesController::class, 'update'])->name('certificaciones.update');
 
 Route::delete('/certificaciones/{certificaciones}',[App\Http\Controllers\CertificacionesController::class, 'destroy'])->name('certificaciones.delete');
+
+
+// Route::get('message', function(){
+        
+//        $correo = new TestMail;
+//        Mail::to('martiresalbertoorozcogonzalez@gmail.com')->send($correo);
+
+//        return "Se ha enviado el mensaje";
+
+// })->name('messages');
+
+
+
+
