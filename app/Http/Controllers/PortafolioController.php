@@ -67,7 +67,7 @@ class PortafolioController extends Controller
      $ruta_imagen = $request['imagen_portafolio']->store('portafolio','public');
 
     //  Resize de la imagen
-     $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1220,550);
+     $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(400,400);
      $img->save();
 
              //Almacenar en la DB con modelo
@@ -79,7 +79,7 @@ class PortafolioController extends Controller
     ]);
 
 
-    return redirect()->route('portafolio.home')->with('estado','El portafolio a sido creado');
+    return redirect()->route('portafolio.index')->with('estado','El portafolio a sido creado');
 
     }
 
@@ -143,7 +143,7 @@ class PortafolioController extends Controller
             $ruta_imagen = $request['imagen_portafolio']->store('upload-recetas','public');
     
             //Resize de la imagen
-            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1220,550);
+            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(400,400);
     
             $img->save();
     
@@ -154,7 +154,7 @@ class PortafolioController extends Controller
         $portafolio->save();
 
         //redireccionar
-        return redirect()->route('portafolio.home');
+        return redirect()->route('portafolio.index');
 
     }
 

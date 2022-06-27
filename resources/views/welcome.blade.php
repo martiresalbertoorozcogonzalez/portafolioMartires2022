@@ -252,13 +252,13 @@
                 </div>
             </div> <!-- row -->
            
-            @foreach ($portafolio as $item)
-                
+            
             
             <div class="row justify-center">
+                @foreach ($portafolio as $item)
                 <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
-                        <img src="/storage/{{ $item->imagen_portafolio }}" alt="web designe" width="250" height="150">
+                        <img src="/storage/{{ $item->imagen_portafolio }}" alt="web designe">
                         <div class="services_content mt-5 xl:mt-10">
                             <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
                                 {{ $item->titulo}}
@@ -267,9 +267,9 @@
                         </div>
                     </div> <!-- single services -->
                 </div>
+                @endforeach
             </div> <!-- row -->
 
-            @endforeach
         </div> <!-- container -->
     </section>
 
