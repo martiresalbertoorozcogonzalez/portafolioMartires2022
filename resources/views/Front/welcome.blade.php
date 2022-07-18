@@ -1,105 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portafolio-Martires-Alberto-OG</title>
-
-    
-      <!--====== Favicon Icon ======-->
-      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-
-      <!--====== Animate CSS ======-->
-      <link rel="stylesheet" href="assets/css/animate.css">
-  
-      <!--====== Slick CSS ======-->
-      <link rel="stylesheet" href="assets/css/tiny-slider.css">
-  
-      <!--====== Line Icons CSS ======-->
-      <link rel="stylesheet" href="assets/fonts/lineicons/font-css/LineIcons.css">
-  
-      <!--====== Tailwind CSS ======-->
-      <link rel="stylesheet" href="assets/css/tailwindcss.css">
-    
-    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
-    <script src="{{ asset('/js/app.js') }}" defer></script>
-</head>
+@extends('layouts.master')
 
 
-<body>
 
-    <!--====== HEADER PART START ======-->
+@section('content')
 
-    <section class="header_area" id="app">
-        <div class="navbar-area bg-gray-100">
-            <div class="container relative">
-                <div class="row items-center">
-                    <div class="w-full">
-                        <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
-                            <a class="navbar-brand mr-5" href="#">
-                                <img src="assets/images/logo.png" alt="Logo" width="60" height="60">
-                            </a>
-                            <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none" id="navbarOne">
-                                <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
-                                    <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll active" href="#home">Inicio</a>
-                                    </li>
-                                    <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#about">Acerca de mi</a>
-                                    </li>
-                                    <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#services">Servicios</a>
-                                    </li>
-                                    <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#certificaciones">Certificaciones</a>
-                                    </li>
-                                    <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#work">Proyectos</a>
-                                    </li>
-                                    <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#contact">Contacto</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header navbar -->
-
-        <div id="home" class="header_hero bg-white relative z-10 overflow-hidden lg:flex items-center">
-           
-            <div class="container">
-                <div class="row">
-                    <div class="w-full lg:w-1/2">
-                        <div class="header_hero_content pt-150 lg:pt-0">
-                            <h2 class="hero_title text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold">Bienvenido a mi <br> portafolio  personal</h2>
-                            <p class="mt-8 lg:mr-8">Encontraras toda la informacion acerca de mis conocimientos y proyectos en desarrollo Web.</p>
-                            <div class="hero_btn mt-10">
-                                <a class="main-btn" href="#contact">Enviar mensaje</a>
-                            </div>
-                        </div> <!-- header hero content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-            <div class="header_shape hidden lg:block"></div>
-
-            <div class="header_image flex items-center justify-center">
-                <div class="image 2xl:pl-25">
-                    <img src="assets/images/dos.svg" alt="Header Image" style="height:400px;">
-                </div>
-            </div> <!-- header image -->
-        </div> <!-- header hero -->
-    </section>
-
-    <!--====== HEADER PART ENDS ======-->
 
     <!--====== ABOUT PART START ======-->
 
@@ -138,13 +42,13 @@
         </div> <!-- container -->
         @endforeach
     </section>
-    
+
     <!--====== ABOUT PART ENDS ======-->
-    
+
     <!--====== SERVICES PART START ======-->
     
     <section id="services" class="services_area pt-120 pb-120">
-        
+            
         <div class="container">
             <div class="row justify-center">
                 <div class="w-full lg:w-1/2">
@@ -205,7 +109,7 @@
     </section>
 
     <!--====== SERVICES PART ENDS ======-->
-
+    
     <!--====== SERTIFICACIONES PART START ======-->
     
     <section id="certificaciones" class="certificaciones_area pt-120 pb-120">
@@ -222,7 +126,7 @@
             <div class="row justify-center">
                 @foreach ($certificaciones as $item)
                     
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                <a href="{{ route('frontcertificaiones-show',['certificaciones' => $item->id]) }}" class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
                     <div class="single_services text-center mt-8 mx-3">
                         <img src="/storage/{{ $item->imagen_certificado }}" alt="web designe">
                         <div class="services_content mt-5 xl:mt-10">
@@ -230,7 +134,8 @@
                             <p class="mt-4">{{ $item->descripcion }}</p>
                         </div>
                     </div> <!-- single services -->
-                </div>
+                </a>
+
                 @endforeach
 
             </div> <!-- row -->
@@ -348,24 +253,18 @@
 
     <!--====== CONTACT PART ENDS ======-->
 
-    <!--====== FOOTER PART START ======-->
-
-    <footer id="footer" class="footer_area bg-black relative z-10">
-        <div class="container">
-            <div class="footer_logo row justify-center">
-                <a class="mt-10 mb-10" href="#"><img src="assets/images/logoNuevoPerfuventas.png" alt="" width="90px"></a>
-            </div>
-        </div> <!-- container -->
-    </footer>
-
-    <!--====== FOOTER PART ENDS ======-->
-    
     <!--====== BACK TOP TOP PART START ======-->
 
     <a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->    
 
-</body>
+    <script src="{{ asset('/js/app.js') }}" defer></script>
 
-</html>
+
+    @endsection
+
+
+    @section('scripts')
+        
+    @endsection

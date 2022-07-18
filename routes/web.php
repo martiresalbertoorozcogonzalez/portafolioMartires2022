@@ -18,11 +18,15 @@ use Illuminate\Support\Facades\Route;
 //Ruta para el Frontend de la pagina
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('front-end');
 
+//Rutas para mostrar en detalle las certificaciones
+Route::get('/frontcertificaciones.show/{certificaciones}', [App\Http\Controllers\FrontendController::class, 'show'])->name('frontcertificaiones-show');
+
 Auth::routes(['verify' => true]);
 
 
 //Rutas para contacto 
 Route::post('contacto', [App\Http\Controllers\MailController::class, 'store'])->name('contacto');
+
 
 //Ruta para el Crud de Acerca de mi
 Route::get('/acercademi/index', [App\Http\Controllers\AcercademiController::class, 'index'])->name('acercademi.index');

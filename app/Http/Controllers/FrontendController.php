@@ -16,8 +16,18 @@ class FrontendController extends Controller
        $acercademi = Acercademi::all(); 
        $certificaciones = Certificaciones::all();
 
-       return view('welcome')->with('acercademi' , $acercademi)
+       return view('Front.welcome')->with('acercademi' , $acercademi)
                              ->with('certificaciones', $certificaciones)
                              ->with('portafolio', $portafolio);
+    }
+
+
+    public function show($id)
+    {
+        $certificaciones = Certificaciones::where('id',$id)->first();
+
+        // dd($certificaciones);
+
+        return view('Front.ver.certificaciones', compact('certificaciones'));
     }
 }

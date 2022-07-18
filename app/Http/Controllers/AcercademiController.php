@@ -63,7 +63,7 @@ class AcercademiController extends Controller
  ]);
 
 
- return redirect()->route('acercademi.home')->with('estado','La informacion a sido creada');
+ return redirect()->route('acercademi.index')->with('estado','La informacion a sido creada');
     }
 
     /**
@@ -143,6 +143,6 @@ class AcercademiController extends Controller
 
         $acercademi->delete();
 
-        return redirect()->route('acercademi.home');
+        return redirect()->route('acercademi.index');
     }
 }
